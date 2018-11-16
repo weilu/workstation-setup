@@ -10,10 +10,12 @@ open /Applications/Flycut.app
 
 echo
 echo "Installing vim configuration"
-pushd ~/
+pushd ~/workspace
 if [ ! -d ~/.vim ]; then
-    git clone https://github.com/pivotal/vim-config.git ~/.vim
-    ~/.vim/bin/install
+    git clone git@github.com:weilu/vim-config.git
+    pushd vim-config
+    rake
+    popd
 fi
 popd
 
