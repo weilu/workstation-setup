@@ -21,6 +21,10 @@ echo "Setting global Git configurations"
 git config --global core.editor /usr/local/bin/vim
 git config --global transfer.fsckobjects true
 
+# personal config
+git config --global user.name "Wei Lu"
+git config --global user.email luwei.here@gmail.com
+
 HOOKS_DIRECTORY=$HOME/workspace/git-hooks-core
 if [ ! -d $HOOKS_DIRECTORY ]; then
   echo
